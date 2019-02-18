@@ -1,0 +1,55 @@
+<div class="leftSide">
+	<a class="was_liked" href="https://www.instagram.com/p/{{i.shortcode}}/" target="_blank" ng-repeat="i in data.feed | limitTo: 6" style="background-image: url({{!i.thumbnail_resources?i.display_url:i.thumbnail_resources[0].src}})"></a>
+	<a class="was_liked" ng-if="!data.feed.length" style="background-image: url(../../img/nolikes.png)"></a>
+</div>
+<div class="rightSide">
+	<div class="ui icon menu" ng-init="theme(true);" style="border-top: 0; border-left: 0; border-right: 0; border-radius: 0; margin: -10px;">
+		<!-- <a class="item">
+			<i class="settings icon"></i>
+		</a> -->
+		<a class="item" href="#!info">
+			<i class="info icon"></i>
+		</a>
+		<div class="right menu">
+			<a target="_blank" title="https://www.instagram.com/{{data.user.username}}"  href="https://www.instagram.com/{{data.user.username}}" class="item">
+				@{{data.user.username}}
+			</a>
+		</div>
+	</div>
+	<br>
+	<div class="logo" style="text-align: center; padding-top: 10px;">
+		<img src="../../img/logo1.png" width="60%">
+		<br>
+		{{data.status}}
+	</div>
+	<div class="ui indicating progress">
+	  <div class="bar"></div>
+	  <div class="label">Likes made today: {{data.feed.length}} of {{data.user.limitTo}}</div>
+	</div>
+
+	<h3 class="ui header dividing" style="margin-bottom: 22px;">Tasks</h3>
+	<div class="ui cards" ng-repeat="i in data.tasks">
+	  <div class="card">
+	    <div class="content">
+	      <div class="header">{{i.type}}</div>
+				<div class="status_dot {{!i.isEnabled?'bg_red':''}}"> </div>
+	      <div class="description" ng-if="i.type != 'feed'">
+	        {{i.textarea}}
+	      </div>
+	    </div>
+	    <div class="ui bottom attached button" ng-click="taskFunc($index)">
+	      <i class="edit icon"></i>
+	      edit task
+	    </div>
+	  </div>
+	</div>
+	<br>
+	<div class="ui warning message" ng-if="ap.showError1">
+	  <i class="close icon" ng-click="ap.showError1 = false;"></i>
+	  <div class="header">
+	    Only <a href="#!plus">PLUS member</a> add new
+	  </div>
+	</div>
+	<button class="fluid ui button" ng-click="(data.tasks.length > 0 && !data.user.isMember)?ap.showError1 = true:taskFunc('add')"><i class="plus icon"></i>add new</button>
+
+</div>

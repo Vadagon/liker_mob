@@ -1,0 +1,26 @@
+<div class="padding plus_page" ng-init="theme()">
+<h2 class="ui dividing header center aligned">PLUS membership</h2>
+  <div class="infoBlock">
+  Double maximum daily speed, unlock advanced filters
+  and add unlimited number of tasks.
+</div>
+
+  <img src="/img/member_card.png">
+  <br>
+  <div class="speicalText">
+    Everything and even more with PLUS membership.
+    <br>
+    One time $5 purchase for endless subscription.
+  </div>
+  <br>
+  <br>
+  <div class="ui buttons"  ng-init="theme()">
+    <button class="ui button primary" ng-click="pay()"><i class="cart plus icon"></i>Purchase it</button>
+	  <div class="or"></div>
+	  <button class="ui button" ng-click="window.location.href = '#!home';">Cancel</button>
+	</div>
+
+  <div class="stick_bottom">
+    *Subscription is valid only on @{{data.user.username}} account
+  </div>
+</div>

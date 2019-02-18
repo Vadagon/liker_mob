@@ -1,0 +1,28 @@
+
+sudo su
+
+cd C:\Users\Vlad\Desktop\projects\Liker_port
+
+cordova build android --release --prod
+
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.jks C:\Users\Vlad\Desktop\projects\Liker_port\platforms\android\app\build\outputs\apk\release\app-release-unsigned.apk my-alias
+
+cd C:\Program Files\AndroidSDK\build-tools\28.0.3
+.\zipalign -v 4 C:\Users\Vlad\Desktop\projects\Liker_port\platforms\android\app\build\outputs\apk\release\app-release-unsigned.apk C:\Users\Vlad\Downloads\apk.apk
+
+.\apksigner verify C:\Users\Vlad\Downloads\apk.apk
+
+
+
+
+password: qweqwe
+
+
+
+ADDITIONAL COMMANDS:
+
+sudo chown -R chrx:chrx .\
+
+ionic cordova resources android -i
+
+cordova run android -- --livereload

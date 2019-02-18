@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<!--
+	Customize this policy to fit your own app's needs. For more guidance, see:
+			https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+	Some notes:
+			* gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+			* https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+			* Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+					* Enable inline JS: add 'unsafe-inline' to default-src
+	-->
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com https://www.instagram.com https://www.verblike.com https://fonts.googleapis.com https://ssl.google-analytics.com/ga.js 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="msapplication-tap-highlight" content="no">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<!-- <link rel="stylesheet" type="text/css" href="css/index.css"> -->
+
+	<title>Popup</title>
+
+	<script type="text/javascript" src="../../comapatible.js"></script>
+
+	<script type="text/javascript" src="../../cordova.js"></script>
+	<script type="text/javascript" src="../../js/jquery.min.js"></script>
+	<script type="text/javascript" src="../bg/utils.js"></script>
+	<script type="text/javascript" src="../bg/headers.js"></script>
+	<script type="text/javascript" src="../bg/main.js"></script>
+	<script type="text/javascript" src="../bg/tools.js"></script>
+	<script type="text/javascript" src="../bg/background.js"></script>
+	<script type="text/javascript" src="../../js/index.js"></script>
+
+	<script src="../../js/plugins.min.js"></script>
+	<script src="../../semantic/semantic.min.js"></script>
+	<script src="popup.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../semantic/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+<body ng-app="main" ng-controller="AppCtrl">
+	<div class="fullScreen white-bg padding" ng-if="showingAgreement" style="z-index: 100002;">
+		<span ng-click="showAgreement(true)" style="position: absolute; top: 2%; right: 2%; font-size: 24px; color: black;">x</span>
+		<h3 class="ui center aligned header">Welcome to the Liker - Instagram bot</h3>
+		<p>
+
+
+			Privacy Policy of the "Liker - Instagram bot" mobile application This Privacy Policy of the "Liker - Instagram bot" application (hereinafter referred to as the Application) applies to all information that can be received about the user while using the application.
+			Using the application means the user's consent to this Policy and the terms of processing of his personal information, specified therein; In case of disagreement with these conditions, the user should refrain from using the application.
+			<br>
+			In the app, DO NOT buy, steal, wind up subscribers / likes, this application is designed to automate your work in promoting Instagram account by choosing Target audience, setting the right settings, in your opinion, and launching the background task.
+			<br> 1. Personal information of users, which receives and processes the application "Liker - Instagram bot"
+			<br>1.1. Personal information that the user provides about himself when registering (creating an account), when activating promotional codes or during the use of the application, including personal information of the user. Information is provided by the user at his discretion
+			<br>1.2. This Policy applies only to the "Liker - Instagram bot" applica tion. "Liker - Instagram bot" does not control and is not responsible for the information of third parties, to which the user can click on the links available in the application. On such sites, the user may collect or request other personal information, and other actions may be performed
+			<br>1.3. "Liker - Instagram bot" in general does not verify the reliability of personal information provided by users, and does not exercise control over their legal capacity. However, "Liker - Instagram bot" proceeds from the fact that the information transmitted to them from users is reliable
+			<br>2. Objectives of collecting and processing personal information of users
+			<br>2.1. The application collects and stores only those
+
+			Privacy Policy of the "Liker - Instagram bot" mobile application not exercise control over their legal capacity. However, "Liker - Instagram bot" proceeds from the fact that the information transmitted to them from users is reliable.
+			<br>2. Objectives of collecting and processing personal information of users
+			<br>2.1. The application collects and stores only those personal data that are required to provide the services that make up the application
+			<br>2.2. Personal information of the user of the application "Liker - Instagram bot" can be used for the following purposes
+			<br>2.2.1. Identification of a party within the framework of agreements;
+			<br>2.2.2. Providing the user with personalized services;
+			<br>2.2.3. Communication with the user, including sending notifications, requests and information regarding the use of services, rendering services, as well as processing requests and applications from the user;
+			<br>2.2.4. Improve application quality, ease of use, development of new services and services;
+			<br>2.2.5. Conducting statistical and other studies based on impersonal data
+			<br>
+			<br>3. Measures used to protect the personal information of users.
+			<br>The "Liker - Instagram bot" team takes necessary and sufficient organizational and technical measures to protect the users personal information from unauthorized or accidental access, destruction, modification, blocking, copying, distribution, as well as from other improper actions of third parties with it.
+			<br>
+			<br>4. Feedback.
+			<br>Questions and Suggestions Any suggestions or questions about this Policy should be reported to the "Liker - Instagram bot" Customer Support Service (verbalike@gmail.com))
+
+
+		</p>
+	</div>
+	<div class="privacy-policy fullScreen white-bg padding" style="z-index: 100001;" ng-if="!acceptedAgreement">
+		<h2 class="ui center aligned header">Welcome to the Liker - Instagram bot</h2>
+		<div class="ui center aligned segment">The application is intended for automated promotion of Instagram accounts</div>
+		<div style="position: absolute; bottom: 2%; text-align: center; width: 100%; left: 0; right: 0;">
+			<a href="#" ng-click="showAgreement()">Access with privacy policy and accept its terms</a>
+			<br>
+			<br>
+			<button class="ui button" ng-click="acceptAgreement()">I ACCEPT</button>
+		</div>
+	</div>
+	<div class="hoverRequired inverted" ng-if="!data.user.username && !loading">
+		<h3 class="ui center aligned header inverted">
+	    You have to login firsts
+	  </h3>
+		<a href="#" class="ui right labeled icon button primary" onclick="openInstagram()">
+		  <i class="right arrow icon"></i>
+		  Go to Instagram.com
+		</a>
+	</div>
+	<div class="hoverRequired inverted" ng-if="loading">
+		<h3 class="ui center aligned header inverted">
+	    Loading...
+			<br>
+			Please wait.
+	  </h3>
+	</div>
+	<div class="main_container" ng-view></div>
+</body>
+</html>
