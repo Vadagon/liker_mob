@@ -1,3 +1,7 @@
+hooks/
+platforms/
+plugins/
+
 # Logs
 logs
 *.log
