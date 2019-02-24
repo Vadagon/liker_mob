@@ -32,12 +32,12 @@
         "source": "C:\\Users\\Vlad\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\b60a4d2de3aae0a50d25a59a513d5056\\res\\drawable-hdpi-v4\\notification_bg_low_pressed.9.png"
     },
     {
-        "merged": "C:\\Users\\Vlad\\Desktop\\projects\\Liker_port\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "C:\\Users\\Vlad\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\b60a4d2de3aae0a50d25a59a513d5056\\res\\drawable-hdpi-v4\\notification_bg_low_normal.9.png"
-    },
-    {
         "merged": "C:\\Users\\Vlad\\Desktop\\projects\\Liker_port\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
         "source": "C:\\Users\\Vlad\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\b60a4d2de3aae0a50d25a59a513d5056\\res\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Vlad\\Desktop\\projects\\Liker_port\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "C:\\Users\\Vlad\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\b60a4d2de3aae0a50d25a59a513d5056\\res\\drawable-hdpi-v4\\notification_bg_low_normal.9.png"
     },
     {
         "merged": "C:\\Users\\Vlad\\Desktop\\projects\\Liker_port\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-land-hdpi_screen.png.flat",

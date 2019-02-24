@@ -1,5 +1,9 @@
 angular.module('main', ["ngRoute"])
 .controller('AppCtrl', function($scope,$location) {
+    $scope.instagramLogData = {
+      username: '',
+      password: ''
+    }
     $scope.loading = true;
     $scope.showingAgreement = !1;
     $scope.acceptedAgreement = storage.getItem('acceptedAgreement');
@@ -35,7 +39,24 @@ angular.module('main', ["ngRoute"])
         taskFunc: 'add'
     };
     $scope.newTask = blankTask;
-
+    $scope.instagramLogn = function(){
+      console.log(data.user.csrf_token);
+      $.ajax({
+          url: 'https://www.instagram.com/accounts/login/ajax/',
+          type: 'post',
+          data: {
+            username: $scope.instagramLogData.username,
+            password: $scope.instagramLogData.password,
+            queryParams: {}
+          },
+          headers: {
+            'x-csrftoken': data.user.csrf_token,
+            'x-requested-with': 'XMLHttpRequest'
+          }
+      }).always(function(e) {
+        // console.log(e)
+      });
+    }
 	// window.location.href = '#!task';
     $scope.theme = function(e){
       setTimeout(function () {

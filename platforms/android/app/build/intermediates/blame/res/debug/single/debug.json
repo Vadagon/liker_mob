@@ -8,12 +8,12 @@
         "source": "C:\\Users\\Vlad\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\b60a4d2de3aae0a50d25a59a513d5056\\res\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png"
     },
     {
-        "merged": "C:\\Users\\Vlad\\Desktop\\projects\\Liker_port\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_icon.png.flat",
-        "source": "C:\\Users\\Vlad\\Desktop\\projects\\Liker_port\\platforms\\android\\app\\src\\main\\res\\mipmap-mdpi\\icon.png"
-    },
-    {
         "merged": "C:\\Users\\Vlad\\Desktop\\projects\\Liker_port\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-port-xhdpi_screen.png.flat",
         "source": "C:\\Users\\Vlad\\Desktop\\projects\\Liker_port\\platforms\\android\\app\\src\\main\\res\\drawable-port-xhdpi\\screen.png"
+    },
+    {
+        "merged": "C:\\Users\\Vlad\\Desktop\\projects\\Liker_port\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_icon.png.flat",
+        "source": "C:\\Users\\Vlad\\Desktop\\projects\\Liker_port\\platforms\\android\\app\\src\\main\\res\\mipmap-mdpi\\icon.png"
     },
     {
         "merged": "C:\\Users\\Vlad\\Desktop\\projects\\Liker_port\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_action_next_item.png.flat",
