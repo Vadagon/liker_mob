@@ -1,16 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.verblike.liker" version="1.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <feature name="BackgroundFetch">
-        <param name="android-package" value="com.transistorsoft.cordova.backgroundfetch.CDVBackgroundFetch" />
-    </feature>
-    <feature name="BackgroundMode">
-        <param name="android-package" value="com.anrip.cordova.BackgroundMode" />
-    </feature>
+<widget id="com.verblike.liker" version="1.2.1" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />
-    </feature>
-    <feature name="InAppBrowser">
-        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
     </feature>
     <feature name="LocalNotification">
         <param name="android-package" value="de.appplant.cordova.plugin.localnotification.LocalNotification" />
@@ -30,16 +21,13 @@
         Verblike Team
     </author>
     <content src="src/popup/popup.html" />
-    <access origin="*" />
+    <access origin="https://www.instagram.com/*" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-    <allow-navigation href="http://www.instagram.com" />
     <allow-intent href="market:*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <preference name="loglevel" value="DEBUG" />
-    <preference name="KeepRunning" value="true" />
-    <preference name="AndroidLaunchMode" value="singleInstance" />
 </widget>

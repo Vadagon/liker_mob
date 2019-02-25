@@ -1,6 +1,6 @@
-hooks/
-platforms/
-plugins/
+hooks
+platforms
+plugins
 
 # Logs
 logs

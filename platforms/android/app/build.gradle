@@ -91,7 +91,6 @@ ext {
 }
 
 // PLUGIN GRADLE EXTENSIONS START
-apply from: "../cordova-plugin-background-fetch/liker-build.gradle"
 apply from: "../cordova-plugin-badge/liker-badge.gradle"
 apply from: "../cordova-plugin-local-notification/liker-localnotification.gradle"
 // PLUGIN GRADLE EXTENSIONS END

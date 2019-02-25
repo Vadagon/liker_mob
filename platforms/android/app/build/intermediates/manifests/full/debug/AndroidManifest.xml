@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.verblike.liker"
     android:hardwareAccelerated="true"
-    android:versionCode="10008"
-    android:versionName="1.0.8" >
+    android:versionCode="10201"
+    android:versionName="1.2.1" >
 
     <uses-sdk
         android:minSdkVersion="19"
@@ -19,8 +19,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.GET_TASKS" /> <!-- for android -->
+    <!-- for android -->
     <!-- <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/> -->
     <!-- <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS"/> -->
     <!-- <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" /> -->
@@ -45,6 +44,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -69,7 +69,7 @@
             android:name="com.verblike.liker.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
             android:label="@string/activity_name"
-            android:launchMode="singleInstance"
+            android:launchMode="singleTop"
             android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
             android:windowSoftInputMode="adjustResize" >
             <intent-filter android:label="@string/launcher_name" >
@@ -78,19 +78,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <service
-            android:name="com.transistorsoft.cordova.backgroundfetch.HeadlessJobService"
-            android:exported="true"
-            android:permission="android.permission.BIND_JOB_SERVICE" />
-
-        <receiver android:name="com.transistorsoft.cordova.backgroundfetch.HeadlessBroadcastReceiver" >
-            <intent-filter>
-                <action android:name="com.verblike.liker.event.BACKGROUND_FETCH" />
-            </intent-filter>
-        </receiver>
-
-        <service android:name="com.anrip.cordova.ForegroundService" />
 
         <provider
             android:name="de.appplant.cordova.plugin.notification.util.AssetProvider"
@@ -114,20 +101,6 @@
             android:exported="false"
             android:launchMode="singleInstance"
             android:theme="@android:style/Theme.Translucent" />
-
-        <receiver android:name="com.transistorsoft.tsbackgroundfetch.FetchAlarmReceiver" />
-
-        <service
-            android:name="com.transistorsoft.tsbackgroundfetch.FetchJobService"
-            android:exported="true"
-            android:permission="android.permission.BIND_JOB_SERVICE" />
-
-        <receiver android:name="com.transistorsoft.tsbackgroundfetch.BootReceiver" >
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
-            </intent-filter>
-        </receiver>
 
         <meta-data
             android:name="android.support.VERSION"

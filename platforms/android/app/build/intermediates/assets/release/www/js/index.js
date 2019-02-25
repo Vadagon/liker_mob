@@ -21,13 +21,13 @@ function log(e){
 }
 log(12223)
 var ddd = 0;
-function openInstagram(){
-  console.log(12312132);
-  window.browserIn = cordova.InAppBrowser.open('https://www.instagram.com/', '_blank', 'location=yes');
-  window.browserIn.addEventListener('loadstop', function() {
-    $('body > div:last-child').css('z-index', '100000');
-  });
-}
+// function openInstagram(){
+//   console.log(12312132);
+//   window.browserIn = cordova.InAppBrowser.open('https://www.instagram.com/', '_blank', 'location=yes');
+//   window.browserIn.addEventListener('loadstop', function() {
+//     $('body > div:last-child').css('z-index', '100000');
+//   });
+// }
 var app = {
     // Application Constructor
     initialize: function() {

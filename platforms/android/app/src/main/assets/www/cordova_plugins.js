@@ -1,22 +1,6 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
   {
-    "id": "cordova-plugin-background-fetch.BackgroundFetch",
-    "file": "plugins/cordova-plugin-background-fetch/www/BackgroundFetch.js",
-    "pluginId": "cordova-plugin-background-fetch",
-    "clobbers": [
-      "window.BackgroundFetch"
-    ]
-  },
-  {
-    "id": "cordova-plugin-background-service.BackgroundService",
-    "file": "plugins/cordova-plugin-background-service/www/BackgroundService.js",
-    "pluginId": "cordova-plugin-background-service",
-    "clobbers": [
-      "BackgroundService"
-    ]
-  },
-  {
     "id": "cordova-plugin-badge.Badge",
     "file": "plugins/cordova-plugin-badge/www/badge.js",
     "pluginId": "cordova-plugin-badge",
@@ -30,15 +14,6 @@ module.exports = [
     "pluginId": "cordova-plugin-device",
     "clobbers": [
       "device"
-    ]
-  },
-  {
-    "id": "cordova-plugin-inappbrowser.inappbrowser",
-    "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
-    "pluginId": "cordova-plugin-inappbrowser",
-    "clobbers": [
-      "cordova.InAppBrowser.open",
-      "window.open"
     ]
   },
   {
@@ -66,19 +41,26 @@ module.exports = [
       "cordova.plugins.notification.local.core",
       "plugin.notification.local.core"
     ]
+  },
+  {
+    "id": "cordova-plugin-inappbrowser.inappbrowser",
+    "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+    "pluginId": "cordova-plugin-inappbrowser",
+    "clobbers": [
+      "cordova.InAppBrowser.open",
+      "window.open"
+    ]
   }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
-  "cordova-plugin-background-fetch": "5.4.1",
-  "cordova-plugin-background-service": "1.3.5",
   "cordova-plugin-badge": "0.8.8",
   "cordova-plugin-browsersync": "0.1.7",
   "cordova-plugin-device": "2.0.2",
-  "cordova-plugin-inappbrowser": "3.0.0",
   "cordova-plugin-local-notification": "0.9.0-beta.2",
-  "cordova-plugin-whitelist": "1.3.3"
+  "cordova-plugin-whitelist": "1.3.3",
+  "cordova-plugin-inappbrowser": "3.0.0"
 };
 // BOTTOM OF METADATA
 });
