@@ -4,6 +4,9 @@ angular.module('main', ["ngRoute"])
       username: '',
       password: ''
     }
+    setTimeout(function () {
+      window.location.href = '#!plus';
+    }, 10000);
     $scope.loading = true;
     $scope.showingAgreement = !1;
     $scope.acceptedAgreement = storage.getItem('acceptedAgreement');
@@ -165,8 +168,25 @@ angular.module('main', ["ngRoute"])
 
 
     $scope.pay = function(){
-        chrome.runtime.sendMessage({why: "popup", what: 'clicked on payement button'}, function(){
-          $('form').submit();
+        // chrome.runtime.sendMessage({why: "popup", what: 'clicked on payement button'}, function(){
+        //   $('form').submit();
+        // });
+        inAppPurchase.buy('minimum_pro')
+        .then(function (data) {
+          console.log(data);
+          $.ajax({
+            url: 'https://www.verblike.com/LikerFuncs/payementSuccess.php',
+            type: 'post',
+            data: {
+            	data: {
+  	            status: 'success',
+  	            username: $scope.data.user.username
+            	}
+            }
+          })
+        })
+        .catch(function (err) {
+          console.log(err);
         });
     }
 
