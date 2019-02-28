@@ -149,10 +149,10 @@ angular.module('main', ["ngRoute"])
             console.log(e);
             if($scope.data.feed.length !== e.feed.length) {
                 $scope.data.feed.unshift(e.feed.pop())
-                // $scope.data.feed = e.feed;
-                // $('.leftSide').css('margin-top', '0');
+                $scope.data.feed = e.feed;
+                $('.leftSide').css('margin-top', '0');
                 $('.leftSide').css('margin-top', '-84px');
-                // $('.leftSide').css('margin-top', '0px');
+                $('.leftSide').css('margin-top', '0px');
                 setTimeout(function () {
                   $( ".leftSide" ).animate({ marginTop: "0" }, 400)
                 }, 300);

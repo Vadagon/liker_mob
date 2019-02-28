@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.verblike.liker" version="1.2.1" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.verblike.liker" version="1.2.3" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Liker</name>
     <description>
         Bring attention to your profile for free
@@ -9,6 +9,8 @@
     </author>
     <content src="src/popup/popup.html" />
     <access origin="https://www.instagram.com/*" />
+    <access origin="https://instagram.flwo2-1.fna.fbcdn.net/*" />
+    <access origin="https://www.verblike.com/*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
